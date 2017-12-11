@@ -1,14 +1,57 @@
 <?xml version="1.0" encoding="utf-8"?>
+
+
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context="com.example.admin.weekendfivegoogleplaces.MainActivity">
 
     <TextView
+        android:id="@+id/tvaddres"
         android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-android:id="@+id/tvaddres"        />
+        android:background="@color/colorPrimary"
+        android:onClick="viewNearBby"
+        android:text="Nearby"
+        android:textColor="@android:color/white" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+
+
+        <Button
+            android:onClick="searchAddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/holo_red_light"
+            android:text="Test" />
+    </LinearLayout>
+    <fragment
+        android:id="@+id/place_autocomplete_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:name="com.google.android.gms.location.places.ui.PlaceAutocompleteFragment"
+        />
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rcAddressView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+<Button
+    android:text="Search NearBy Places"
+    android:onClick="searchNearbyActivty"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" />
+
 
 </LinearLayout>
+
